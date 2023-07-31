@@ -1,0 +1,12 @@
+To download your own rural networks, follow these steps:
+
+1. Create the region you want to download as a geojson polygon using geojson.io
+2. Download the street network using OSMnx in Python using the code provided in 'street_network_from_json.py'.
+
+The networkX graph G then contains information about the nodes, indexed by the OSM ID and with attributes 'x' and 'y' denoting the latitude and longitute of the node, and about the edges, including the length of the edges as an attribute 'length'. 
+
+You can access these attributes via 
+    G.[j][i]['length']
+for the attribute 'length' of the link from 'j' to 'i' and
+    G.nodes()[j]['x']
+for the attribute 'x' of node j.
